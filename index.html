@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tosh-qaychi-qog'oz</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ </head>
+ <body class="bg-[#131537] pl-[32px] pr-[32px] pt-[32px]  font-[Barlow_Semi_Condensed]">
+
+
+    
+
+      <!-- main -->
+
+    <div class="flex flex-col  justify-center items-center" >
+         <!-- score  -->
+          <div class="flex justify-between p-[10px] border-[5px]  border-[#FFFFFF4A] sm:h-[180px] sm:w-[600px] w-[311px] h-[96px] items-center">
+    
+             <div>
+                 <h1 class="text-[18px] font-bold text-white p-[24px] sm:text-[40px] ">
+                     ROCK <br> PAPER <br> SCISSORS
+                 </h1>
+             </div>
+    
+             <div class="bg-[#F3F3F3] pl-[21px] sm:pr-[47px] sm:pt-[16px] sm:pb-[16px] sm:pl-[47px] pr-[21px] felx flex-col items-center justify-center rounded-[8px]" >
+                    <h2 class="text-[#2A45C2] font-[600] text-[10px]">SCORE</h2>
+                    <h2 class="text-[#565468] sm:text-[64px] font-bold text-[40px] ">12</h2>
+             </div>
+    
+          </div>
+
+             <!-- game Zone -->
+             <div class="p-[32px] h-[281px] w-[311px] ">
+                 <div id="gameZone" class=" flex justify-center items-center  " >
+                     <img class="js-hand sm:w-[198px] sm:h-[203px] border-[10px] border-[#131537] duration-[0.4s] rounded-[100%] hover:border-[#FFFFFF]  absolute right-[60%] w-[129px] top-[30%] h-[132px]" src="./img/paper.svg" alt="paper">
+                     <img class="js-hand sm:w-[198px] sm:h-[203px] border-[10px] border-[#131537] duration-[0.4s] rounded-[100%]  hover:border-[#FFFFFF] absolute left-[60%]    w-[129px] top-[30%] h-[132px]" src="./img/qaychi.svg" alt="qaychi">
+                     <img class="js-hand sm:w-[198px] sm:h-[203px] border-[10px] border-[#131537] duration-[0.4s] rounded-[100%]  hover:border-[#FFFFFF]   absolute  top-[50%] w-[129px] h-[132px]" src="./img/rock.svg" alt="rock">
+
+                      <!-- rules -->
+            <div class="absolute top-[85%]">
+                <button class="hover:bg-white duration-[0.4s] hover:text-[#3B4262]  font-[600] text-[16px] text-[#FFFFFF] pt-[11px] pl-[37px] pr-[37px] border-[2px]  rounded-[8px] border-white pb-[11px]">
+                    RULES
+                </button>
+            </div>
+                 </div>
+             </div>
+            
+              <!-- result zone -->
+            <div id="resultZone" class="hidden  flex flex-col justify-between items-center  ">
+                <div class="flex justify-between gap-[60px] items-center pb-[112px]">
+                    <img id="user" src=""  class="sm:w-[198px] md:w-[292px] lg:h-[300px] sm:h-[203px] w-[129px] h-[132px] " alt="user">
+                    <div class="pb-[52px] hidden md:block flex flex-col items-center" >
+                    <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
+                    </div>
+                    <img id="robot" src="" class="sm:w-[198px] sm:h-[203px] lg:w-[292px] lg:h-[300px] w-[129px] h-[132px] " alt="robot">
+                </div>
+                <div class="pb-[52px] md:hidden" >
+                    <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
+                </div>
+            </div>
+        
+        
+           
+    </div>
+    <script type="module" src="./js/app.js"></script>
+ </body>
+ </html>
