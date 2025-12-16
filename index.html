@@ -9,46 +9,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
  </head>
- <body class="bg-[#131537] pl-[32px] pr-[32px] pt-[32px]  font-[Barlow_Semi_Condensed]">
+ <body class="bg-[#131537] font-[Barlow_Semi_Condensed]">
 
 
-    
+    <!-- score -->
+    <div class="flex justify-center items-center p-[10px]">
 
-      <!-- main -->
+        <div class="border-[10px] border-[#FFFFFF4A] rounded-[16px]">
+            <strong  class="text-white text-[48px] p-[10px]" >SCORE:</strong>
+            <span class="text-white text-[48px] p-[10px]" id="score">0</span>
+        </div>
+    </div>
 
-    <div class="flex flex-col  justify-center items-center" >
-         <!-- score  -->
-          <div class="flex justify-between p-[10px] border-[5px]  border-[#FFFFFF4A] sm:h-[180px] sm:w-[600px] w-[311px] h-[96px] items-center">
-    
-             <div>
-                 <h1 class="text-[18px] font-bold text-white p-[24px] sm:text-[40px] ">
-                     ROCK <br> PAPER <br> SCISSORS
-                 </h1>
-             </div>
-    
-             <div class="bg-[#F3F3F3] pl-[21px] sm:pr-[47px] sm:pt-[16px] sm:pb-[16px] sm:pl-[47px] pr-[21px] felx flex-col items-center justify-center rounded-[8px]" >
-                    <h2 class="text-[#2A45C2] font-[600] text-[10px]">SCORE</h2>
-                    <h2 class="text-[#565468] sm:text-[64px] font-bold text-[40px] ">12</h2>
-             </div>
-    
-          </div>
 
-             <!-- game Zone -->
-             <div class="p-[32px] h-[281px] w-[311px] ">
-                 <div id="gameZone" class=" flex justify-center items-center  " >
-                     <img class="js-hand sm:w-[198px] sm:h-[203px] border-[10px] border-[#131537] duration-[0.4s] rounded-[100%] hover:border-[#FFFFFF]  absolute right-[60%] w-[129px] top-[30%] h-[132px]" src="./img/paper.svg" alt="paper">
-                     <img class="js-hand sm:w-[198px] sm:h-[203px] border-[10px] border-[#131537] duration-[0.4s] rounded-[100%]  hover:border-[#FFFFFF] absolute left-[60%]    w-[129px] top-[30%] h-[132px]" src="./img/qaychi.svg" alt="qaychi">
-                     <img class="js-hand sm:w-[198px] sm:h-[203px] border-[10px] border-[#131537] duration-[0.4s] rounded-[100%]  hover:border-[#FFFFFF]   absolute  top-[50%] w-[129px] h-[132px]" src="./img/rock.svg" alt="rock">
 
-                      <!-- rules -->
-            <div class="absolute top-[85%]">
-                <button class="hover:bg-white duration-[0.4s] hover:text-[#3B4262]  font-[600] text-[16px] text-[#FFFFFF] pt-[11px] pl-[37px] pr-[37px] border-[2px]  rounded-[8px] border-white pb-[11px]">
-                    RULES
-                </button>
+        <!-- game Zone -->
+        <div class="">
+            <div id="gameZone" class="flex justify-center items-center min-h-[400px]" >
+                <!-- basic -->
+                <div id="basic" class="grid grid-col-3 grid-rows-4 gap-4">
+                    <img class="js-hand w-[180px] h-[180px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/paper.svg" alt="paper">
+                    <img class="js-hand w-[180px] h-[180px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/qaychi.svg" alt="qaychi">
+                    <img class="js-hand w-[180px] h-[180px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/rock.svg" alt="rock">
+                </div>
+              
+                <div id="advenced" class="hidden ">
+                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%]  " src="./img/paper.svg" alt="paper">
+                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/qaychi.svg" alt="qaychi">
+                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/rock.svg" alt="rock">
+                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/lizard.svg" alt="lizard">
+                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/spok.svg" alt="spok">
+                </div>
             </div>
-                 </div>
-             </div>
-            
+        </div>
+        <div class="flex justify-end items-center  p-[10px]">
+            <button id="modeChanger" class="w-[100px] h-[50px] hover:bg-white hover:text-[#131537] hover:border-[#1F3757] duration-[0.4s] hover:border-2  bg-[#131537] border-2 border-white text-white rounded-[16px] "></button>
+        </div>
               <!-- result zone -->
             <div id="resultZone" class="hidden  flex flex-col justify-between items-center  ">
                 <div class="flex justify-between gap-[60px] items-center pb-[112px]">
@@ -61,11 +57,8 @@
                 <div class="pb-[52px] md:hidden" >
                     <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
                 </div>
-            </div>
-        
-        
-           
-    </div>
+            </div>            
+    <!-- </div> -->
     <script type="module" src="./js/app.js"></script>
  </body>
  </html>

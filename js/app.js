@@ -1,10 +1,30 @@
-import { elGameZone, elHands, elRefreshGameButton, elResultZone, elRobot, elUser } from "./html-elements.js";
+import { elAdvenced, elBasic, elScore ,  elGameZone, elHands, elModeChangerButton, elRefreshGameButton, elResultZone, elRobot, elUser } from "./html-elements.js";
+
+
+let activeMode = "basic"
+
+
 
 // robot Choose
 function robotChoose() {
-    const hands = ["rock","paper","qaychi" ]
+    let hands = ["rock","paper","qaychi",]
     const randomIndex = Math.trunc(Math.random() * hands.length)
     return hands[randomIndex]
+}
+
+// mod changer
+function modeChanger() {
+    if(activeMode === "basic") {
+        activeMode = "advenced"
+        elAdvenced.style.display = "none"
+        elBasic.style.display = "flex"
+        elModeChangerButton.innerText = "Basic"
+    }else {
+        activeMode = "basic"
+        elAdvenced.style.display = "flex"
+        elBasic.style.display = "none"
+        elModeChangerButton.innerText = "Advenced"
+    }
 }
 
 // change zone
@@ -20,23 +40,48 @@ function swapZone(boolean){
 
 // find winner
 function checkWinner(user , robot){
-    if(user === robot){
-        return "TIE"
+    const actions = {
+        paper: {
+            paper: "TIE",
+            qaychi: "YOU LOSE" ,
+            rock: "YOU WIN" ,
+            spok: "YOU WIN" ,
+            lizard: "YOU LOSE" ,
+        },
+        qaychi: {
+            qaychi: "TIE",
+            paper: "YOU WIN" ,
+            rock: "YOU LOSE" ,
+            spok: "YOU LOSE" ,
+            lizard: "YOU WIN" ,
+        },
+        rock: {
+            rock: "TIE",
+            paper: "YOU LOSE" ,
+            qaychi: "YOU WIN" ,
+            spok: "YOU LOSE" ,
+            lizard: "YOU WIN" ,
+        },
+        spok: {
+            spok: "TIE",
+            paper: "YOU LOSE" ,
+            qaychi: "YOU WIN" ,
+            rock: "YOU WIN" ,
+            lizard: "YOU LOSE" ,
+        },
+        lizard: {
+            lizard: "TIE",
+            paper: "YOU WIN" ,
+            qaychi: "YOU LOSE" ,
+            rock: "YOU LOSE" ,
+            spok: "YOU WIN" ,
+        },
     }
-    else if (user === "paper" && robot === "qaychi"){
-        return "You Lose"
-    }
-    else if (user === "qaychi" && robot === "rock"){
-        return "You Lose"
-    }
-    else if (user === "rock" && robot === "paper"){
-        return "You Lose"
-    }else{
-        return "You Win"
-    }
-}
 
+    return actions[user][robot];
+ }
 
+// hands
 elHands.forEach((elHand) => {
     elHand.addEventListener("click", (evt) => {
         swapZone(true)
@@ -49,7 +94,7 @@ elHands.forEach((elHand) => {
         setTimeout(() => {
             elRobot.src = `./img/${robot}.svg`
             const winner = checkWinner(user , robot)
-            alert(winner)
+            if(winner === "YOU WIN" ) changeScore();
         }, 1000);
     } )
 })
@@ -59,5 +104,14 @@ elRefreshGameButton.addEventListener("click",() => {
     swapZone(false)
 })
 
+// change score
+function changeScore() {
+    elScore.innerText = +elScore.innerText + 1   
+}
+
+elModeChangerButton.addEventListener("click" , modeChanger)
+
+
+modeChanger()
 
 
