@@ -11,54 +11,65 @@
  </head>
  <body class="bg-[#131537] font-[Barlow_Semi_Condensed]">
 
-
-    <!-- score -->
-    <div class="flex justify-center items-center p-[10px]">
-
-        <div class="border-[10px] border-[#FFFFFF4A] rounded-[16px]">
-            <strong  class="text-white text-[48px] p-[10px]" >SCORE:</strong>
-            <span class="text-white text-[48px] p-[10px]" id="score">0</span>
-        </div>
-    </div>
-
-
-
-        <!-- game Zone -->
-        <div class="">
-            <div id="gameZone" class="flex justify-center items-center min-h-[400px]" >
-                <!-- basic -->
-                <div id="basic" class="flex justify-center items-center gap-4">
-                    <img class="js-hand w-[180px] h-[180px] duration-[0.6s] absolute top-[30%] left-[35%]  border-transparent border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/paper.svg" alt="paper">
-                    <img class="js-hand w-[180px] h-[180px] duration-[0.6s] absolute top-[30%] right-[35%] border-transparent border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/qaychi.svg" alt="qaychi">
-                    <img class="js-hand w-[180px] h-[180px] duration-[0.6s] absolute top-[50%]  border-transparent  border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/rock.svg" alt="rock">
-                </div>
-              
-                <div id="advenced" class="hidden ">
-                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%]  " src="./img/paper.svg" alt="paper">
-                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/qaychi.svg" alt="qaychi">
-                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/rock.svg" alt="rock">
-                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/lizard.svg" alt="lizard">
-                    <img class="js-hand w-[175px] duration-[0.6s]  border-transparent h-[178px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/spok.svg" alt="spok">
-                </div>
+    <main class="flex flex-col justify-center items-center">
+        <!-- score -->
+        <div class="flex justify-between items-center p-[10px] border-[10px] w-[700px] border-[#FFFFFF4A] rounded-[16px]">
+            <div>
+                <img src="./img/tipa-logo (1).svg" alt="">
+            </div>
+    
+            <div class="flex flex-col justify-center items-center bg-white text-black rounded-[12px] ">
+                <strong  class="text-[28px] p-[6px]" >SCORE:</strong>
+                <span class="font-bold text-[50px]" id="score">0</span>
             </div>
         </div>
-        <div class="flex justify-end items-center  p-[10px]">
-            <button id="modeChanger" class="w-[100px] h-[50px] hover:bg-white hover:text-[#131537] hover:border-[#1F3757] duration-[0.4s] hover:border-2  bg-[#131537] border-2 border-white text-white rounded-[16px] "></button>
-        </div>
-              <!-- result zone -->
-            <div id="resultZone" class="hidden  flex flex-col justify-between items-center  ">
-                <div class="flex justify-between gap-[60px] items-center pb-[112px]">
-                    <img id="user" src=""  class="sm:w-[198px] md:w-[292px] lg:h-[300px] sm:h-[203px] w-[129px] h-[132px] " alt="user">
-                    <div class="pb-[52px] hidden md:block flex flex-col items-center" >
-                    <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
+    
+    
+    
+            <!-- game Zone -->
+            <div class="">
+                <div id="gameZone" class="flex justify-center items-center min-h-[400px]" >
+                    <!-- basic -->
+                    <div id="basic" class="flex justify-center items-center gap-4">
+                        <img class="js-hand w-[200px] h-[203px] duration-[0.6s] absolute top-[30%] left-[35%]  border-transparent border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/paper.svg" alt="paper">
+                        <img class="js-hand w-[200px] h-[203px] duration-[0.6s] absolute top-[30%] right-[35%] border-transparent border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/qaychi.svg" alt="qaychi">
+                        <img class="js-hand w-[200px] h-[203px] duration-[0.6s] absolute top-[50%]  border-transparent  border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/rock.svg" alt="rock">
                     </div>
-                    <img id="robot" src="" class="sm:w-[198px] sm:h-[203px] lg:w-[292px] lg:h-[300px] w-[129px] h-[132px] " alt="robot">
+                  
+                    <div id="advenced" class="hidden  flex-col justify-center items-center">
+                        <div>
+                            <img class="js-hand w-[200px] duration-[0.6s]  border-transparent h-[203px] border-[20px] border-transparent hover:border-white rounded-[100%]  " src="./img/paper.svg" alt="paper">
+                        </div>
+                        <div class="flex justify-center gap-[182px] items-center">
+                            <img class="js-hand w-[200px] duration-[0.6s]  border-transparent h-[203px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/rock.svg" alt="rock">
+                            <img class="js-hand w-[200px] duration-[0.6s]  border-transparent h-[203px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/qaychi.svg" alt="qaychi">
+                        </div>
+                        <div class="flex justify-center gap-[52px] items-center">
+                            <img class="js-hand w-[200px] duration-[0.6s]  border-transparent h-[203px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/lizard.svg" alt="lizard">
+                            <img class="js-hand w-[200px] duration-[0.6s]  border-transparent h-[203px] border-[20px] border-transparent hover:border-white rounded-[100%] " src="./img/spok.svg" alt="spok">
+                        </div>
+                    </div>
                 </div>
-                <div class="pb-[52px] md:hidden" >
-                    <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
-                </div>
-            </div>            
-    <!-- </div> -->
+            </div>
+            <div class="flex justify-end items-center  p-[10px]">
+                <button id="modeChanger" class="w-[100px] h-[50px] hover:bg-white hover:text-[#131537] hover:border-[#1F3757] duration-[0.4s] hover:border-2  bg-[#131537] border-2 border-white text-white rounded-[16px] mt-[20px] "></button>
+            </div>
+                  <!-- result zone -->
+                <div id="resultZone" class="hidden  flex flex-col justify-between items-center  ">
+                    <div class="flex justify-between gap-[60px] items-center pb-[112px]">
+                        <img id="user" src=""  class="sm:w-[198px] md:w-[292px] lg:h-[300px] sm:h-[203px] w-[129px] h-[132px] " alt="user">
+                        <div class="pb-[52px] hidden md:block flex flex-col items-center" >
+                        <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
+                        </div>
+                        <img id="robot" src="" class="sm:w-[198px] sm:h-[203px] lg:w-[292px] lg:h-[300px] w-[129px] h-[132px] " alt="robot">
+                    </div>
+                    <div class="pb-[52px] md:hidden" >
+                        <button id="refreshGameButton" class="hover:bg-[#131537] hover:text-white duration-[0.4s] border-[2px] border-white bg-white rounded-[8px] text-[#3B4262] font-[600] tex-[16px] pl-[60px] pr-[60px] pt-[15px] pb-[15px]">PLAY AGAIN</button>
+                    </div>
+                </div>            
+        <!-- </div> -->
+    </main>
+
     <script type="module" src="./js/app.js"></script>
  </body>
  </html>
