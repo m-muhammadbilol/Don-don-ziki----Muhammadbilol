@@ -5,6 +5,7 @@ let activeMode = "basic"
 
 
 
+
 // robot Choose
 function robotChoose() {
     let hands = ["rock","paper","qaychi",]
@@ -106,9 +107,7 @@ elRefreshGameButton.addEventListener("click",() => {
 
 // change score
 function changeScore() {
-    let score = +elScore.innerText + 1; // HTMLdagi ballni olish va +1
-    elScore.innerText = score;           // HTMLga yozish
-    localStorage.setItem("score", score); 
+    elScore.innerText = +elScore.innerText + 1; 
 }
 
 elModeChangerButton.addEventListener("click" , modeChanger)
