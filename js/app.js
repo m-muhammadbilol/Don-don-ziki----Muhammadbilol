@@ -106,7 +106,9 @@ elRefreshGameButton.addEventListener("click",() => {
 
 // change score
 function changeScore() {
-    elScore.innerText = +elScore.innerText + 1   
+    let score = +elScore.innerText + 1; // HTMLdagi ballni olish va +1
+    elScore.innerText = score;           // HTMLga yozish
+    localStorage.setItem("score", score); 
 }
 
 elModeChangerButton.addEventListener("click" , modeChanger)
