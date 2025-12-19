@@ -103,13 +103,21 @@ elRefreshGameButton.addEventListener("click",() => {
     swapZone(false)
 })
 
+let score = localStorage.getItem("score");
+if (score === null) {
+    score = 0
+    localStorage.setItem("score", score)
+}
+
+elScore.innerText = score
+
 // change score
 function changeScore() {
-    let score = localStorage.getItem("elScore");
-    score = 0
-    elScore.innerText = score;
-    localStorage.setItem("elScore", elScore);
-}
+    let score = localStorage.getItem("score")
+    score = +score + 1
+    localStorage.setItem("score", score)
+    elScore.innerText = score
+ }
 
 elModeChangerButton.addEventListener("click" , modeChanger)
 
