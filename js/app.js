@@ -4,8 +4,6 @@ import { elAdvenced, elBasic, elScore ,  elGameZone, elHands, elModeChangerButto
 let activeMode = "basic"
 
 
-
-
 // robot Choose
 function robotChoose() {
     let hands = ["rock","paper","qaychi",]
@@ -107,7 +105,10 @@ elRefreshGameButton.addEventListener("click",() => {
 
 // change score
 function changeScore() {
-    elScore.innerText = +elScore.innerText + 1; 
+    let score = localStorage.getItem("elScore");
+    score = 0
+    elScore.innerText = score;
+    localStorage.setItem("elScore", elScore);
 }
 
 elModeChangerButton.addEventListener("click" , modeChanger)
